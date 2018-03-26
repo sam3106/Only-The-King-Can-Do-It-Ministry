@@ -18,7 +18,7 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="col-sm-2">
-            <a class="nav-link text-nowrap" href="about.html">About Us</a>
+            <a class="nav-link text-nowrap" href="about-us.html">About Us</a>
           </li>
           <li class="col-sm-2">
             <a class="nav-link" href="event.html">Events</a>
