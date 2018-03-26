@@ -1,0 +1,129 @@
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html{
+      height: 100%;
+  box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+      position: relative;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+a{color: white;}
+h1{font-weight: bold;}
+p{
+	font-size: 1.1rem;
+}
+.all{
+    padding-bottom: 2rem;
+}
+/*-----------------------------------Navigation-----------------------------------------*/
+.banner{
+	background-image: url("nav-background.jpg");
+	background-size: 100% 100%;
+    min-height: 35vh;
+}
+.active-link{
+    background-color: fuchsia;
+}
+.bird-img{
+    max-width: 25vh;
+}
+/*-----------------------------------Animations----------------------------------------*/
+.left{
+    position: relative;
+    animation-name: left;
+    animation-duration: 3s;
+}
+@keyframes left {
+    0%   {opacity:-8; right:100%;}
+    80%{opacity: 1; }
+    100% { right:0px;}
+}
+.right{
+    position: relative;
+    animation-name: right;
+    animation-duration: 3s;
+}
+@keyframes right {
+    0%   {opacity:-8; left:100%;}
+    80%{opacity: 1; }
+    100% { left:0;}
+}
+.down{
+    position: relative;
+    animation-name:down;
+    animation-duration: 4s;
+}
+@keyframes down {
+    0%   {opacity:-8;top:20vh;}
+    80%{opacity: 1; }
+    100% {top:0px;}
+}
+.up{
+    position: relative;
+    animation-name: up;
+    animation-duration: 5s;
+}
+@keyframes up {
+    0%{opacity:1; right: 20vh;bottom:0; }
+    70%{opacity: -1;right: 0;}
+    80%{opacity: 1;  bottom:10vh;right:0;}
+    100% { bottom:0;}
+}
+/*-----------------------------------Section----------------------------------------*/
+#event-img{
+    background-image: url("events.JPG");
+    min-height: 50vh;
+    background-size:100% 100%;
+}
+/*-----------------------------------Section-Two----------------------------------------*/
+#events2{
+    background-image: url("events2.jpg");
+    min-height: 50vh;
+    background-size:100% 100%;
+}
+/*-----------------------------------Footer----------------------------------------*/
+.footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .5vh;
+  background-color: #efefef;
+  text-align: center;  
+}
+/*-----------------------------------Media query----------------------------------------*/
+@media only screen and (max-width: 1024px) {
+#event-img{
+    min-height: 67vh;
+}
+@media only screen and (max-width: 768px) {
+   .bird-img{
+    max-width: 20vh;
+}
+    .banner{
+    min-height: 30vh;
+}
+@media only screen and (max-width: 577px) {
+    nav a{font-size: .9rem;}
+    nav h1{font-size: 1.2rem;}
+    h2{font-size: 1.6em}
+
+}

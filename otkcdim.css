@@ -1,0 +1,164 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html{
+  box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+      position: relative;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+/*-----------------------------------------Navigation--------------------------------------------------*/
+.bird-img{
+    max-width: 24vh;
+}
+.banner{
+	background-image: url("nav-background.jpg");
+	background-size: 100% 100%;
+    min-height: 26vh;
+}
+
+.active-link{
+    background-color: fuchsia;
+}
+a,p,h2,h1,h5{color: white;}
+h1{font-weight: bold;}
+p{
+	font-size: 1rem;
+    line-height: 1.4rem
+}
+/*-----------------------------------------Animations--------------------------------------------------*/
+.left{
+    position: relative;
+    animation-name: left;
+    animation-duration: 3s;
+}
+@keyframes left {
+    0%   {opacity:-8; right:100%;}
+    80%{opacity: 1; }
+    100% { right:0px;}
+}
+.right{
+    position: relative;
+    animation-name: right;
+    animation-duration: 3s;
+}
+@keyframes right {
+    0%   {opacity:-8; left:100%;}
+    80%{opacity: 1; }
+    100% { left:0;}
+}
+.down{
+    position: relative;
+    animation-name:down;
+    animation-duration: 4s;
+}
+@keyframes down {
+    0%   {opacity:-8;top:20vh;}
+    80%{opacity: 1; }
+    100% {top:0px;}
+}
+.up{
+    position: relative;
+    animation-name: up;
+    animation-duration: 5s;
+}
+@keyframes up {
+    0%{opacity:1; right: 20vh;bottom:0; }
+    70%{opacity: -1;right: 0;}
+    80%{opacity: 1;  bottom:10vh;right:0;}
+    100% { bottom:0;}
+}
+/*-----------------------------------------Section One--------------------------------------------------*/
+.section-img{
+ background-image: url("homepage-me.JPG");
+ background-size: 100% 100%;
+ min-height: 26vh;
+}
+
+.section-container{
+	background: rebeccapurple;
+}
+/*-----------------------------------------Section Two--------------------------------------------------*/
+.devotion{
+    background-color: floralwhite;
+    padding: 5vh;
+}
+#guessbook h5, #guessbook h1{
+    color: fuchsia;
+}
+/*-----------------------------------------Section Three--------------------------------------------------*/
+#guestbook{
+     padding-bottom: 6rem;
+    min-height: 33vh;
+    background-image:url("cross-img.gif");
+    background-size: 100% 100%;
+}
+#guestbook img{
+max-width: 30%;
+}
+#guestbook img:first-child{
+    max-width: 27%;
+}
+/*-----------------------------------------Footer--------------------------------------------------*/
+.footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .5vh;
+  background-color: #efefef;
+  text-align: center;  
+}
+.padding-top{
+    padding-top: 3vh;
+}
+.padding-bottom{
+    padding-bottom: 3vh;
+}
+/*-----------------------------------------Media Query--------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+   .bird-img{
+    max-width: 20vh;
+}
+    .banner{
+    min-height: 30vh;
+}
+    #guestbook{
+    min-height: 36vh;
+}
+    h2{
+        font-size:1.65rem;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    nav a{font-size: .9rem;}
+    nav h1{font-size: 1.2rem;}
+    h2{font-size: 1.6em}
+    .padding-top{
+    padding-top: 0vh;
+}
+.padding-bottom{
+    padding-bottom: 0vh;
+}
+    .section-img{
+        min-height: 35vh;
+    }
+}
+
